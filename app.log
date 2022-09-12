@@ -1,0 +1,22 @@
+2022-08-01 09:42:21,314 INFO Connected (version 2.0, client OpenSSH_7.4)
+2022-08-01 09:42:21,366 ERROR Exception (client): Unable to agree on a pubkey algorithm for signing a 'ssh-rsa' key!
+2022-08-01 09:42:21,368 ERROR Traceback (most recent call last):
+2022-08-01 09:42:21,368 ERROR   File "/var/www/webroot/virtenv/lib/python3.9/site-packages/paramiko/transport.py", line 2164, in run
+2022-08-01 09:42:21,368 ERROR     handler(self.auth_handler, m)
+2022-08-01 09:42:21,368 ERROR   File "/var/www/webroot/virtenv/lib/python3.9/site-packages/paramiko/auth_handler.py", line 386, in _parse_service_accept
+2022-08-01 09:42:21,368 ERROR     algorithm = self._finalize_pubkey_algorithm(key_type)
+2022-08-01 09:42:21,368 ERROR   File "/var/www/webroot/virtenv/lib/python3.9/site-packages/paramiko/auth_handler.py", line 352, in _finalize_pubkey_algorithm
+2022-08-01 09:42:21,368 ERROR     raise AuthenticationException(err.format(key_type))
+2022-08-01 09:42:21,368 ERROR paramiko.ssh_exception.AuthenticationException: Unable to agree on a pubkey algorithm for signing a 'ssh-rsa' key!
+2022-08-01 09:42:21,368 ERROR 
+2022-08-01 19:08:16,188 INFO Connected (version 2.0, client OpenSSH_7.4)
+2022-08-01 19:08:16,241 ERROR Exception (client): Unable to agree on a pubkey algorithm for signing a 'ssh-rsa' key!
+2022-08-01 19:08:16,243 ERROR Traceback (most recent call last):
+2022-08-01 19:08:16,243 ERROR   File "/var/www/webroot/virtenv/lib/python3.9/site-packages/paramiko/transport.py", line 2164, in run
+2022-08-01 19:08:16,243 ERROR     handler(self.auth_handler, m)
+2022-08-01 19:08:16,243 ERROR   File "/var/www/webroot/virtenv/lib/python3.9/site-packages/paramiko/auth_handler.py", line 386, in _parse_service_accept
+2022-08-01 19:08:16,243 ERROR     algorithm = self._finalize_pubkey_algorithm(key_type)
+2022-08-01 19:08:16,243 ERROR   File "/var/www/webroot/virtenv/lib/python3.9/site-packages/paramiko/auth_handler.py", line 352, in _finalize_pubkey_algorithm
+2022-08-01 19:08:16,243 ERROR     raise AuthenticationException(err.format(key_type))
+2022-08-01 19:08:16,243 ERROR paramiko.ssh_exception.AuthenticationException: Unable to agree on a pubkey algorithm for signing a 'ssh-rsa' key!
+2022-08-01 19:08:16,243 ERROR 
