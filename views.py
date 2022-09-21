@@ -345,8 +345,16 @@ def create_report_page(request):
 @login_required
 def reports_txt_files_list(request):
     name=str(request.user)
-    f_list = os.listdir('./reports/' + name + '/txt/')
     f_path = './reports/' + name + '/txt/'
+
+    if not os.path.exists('./reports/' + name):
+        os.mkdir('./reports/' + name)
+        os.mkdir(f_path)
+    if not os.path.exists(f_path):
+        os.mkdir(f_path)
+        
+    f_list = os.listdir('./reports/' + name + '/txt/')   
+    
     return render(request, 'crypto_templ/cr_files_list.html', context = {'user_name':name, 'total_files':f_list, 'path':f_path})
 
 @login_required
@@ -361,8 +369,15 @@ def delete_txt_report(request, f_name):
 @login_required
 def reports_xlsx_files_list(request):
     name=str(request.user)
-    f_list = os.listdir('./reports/' + name + '/xlsx/')
     f_path = './reports/' + name + '/xlsx/'
+    if not os.path.exists('./reports/' + name):
+        os.mkdir('./reports/' + name)
+        os.mkdir(f_path)
+    if not os.path.exists(f_path):
+        os.mkdir(f_path)
+        
+    f_list = os.listdir('./reports/' + name + '/xlsx/')
+    
     return render(request, 'crypto_templ/cr_files_list.html', context = {'user_name':name, 'total_files':f_list, 'path':f_path})
 
 @login_required

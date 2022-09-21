@@ -173,6 +173,7 @@ class rep_from_test_res():
         f_out_df.index.name = 'index'
         f_out_df.columns = col_names
         f_out_df['date'] = pd.to_datetime(f_out_df['date'], unit='ms') #приводим дату в читаемый вид
+      
         sftp_client.close()
 
         return f_out_df
@@ -269,7 +270,8 @@ class rep_from_test_res():
         	df_pair_1d = self.get_pair_fdata(f_pair_name, '1d')
 
         	df_pair_1d['volume'] = df_pair_1d['volume']*df_pair_1d['close']
-	
+
+                	
 	#    f_pair_hour_name=pairs_path+'/'+i.replace('/', '_')+'-1h.json'
 	#    f_pair_day_name=pairs_path+'/'+i.replace('/', '_')+'-1d.json'
 	#    print(f_pair_name)
@@ -442,7 +444,7 @@ class rep_from_test_res():
 
         		idnex_count += 1
 			
-        	bar_step += len(buf_df)*(len(self.N_candle_analyze)+len(self.N_pre_candle_analyze))
+#        	bar_step += len(buf_df)*(len(self.N_candle_analyze)+len(self.N_pre_candle_analyze))
         	#print('last step', bar_step)
 
         for cc, n in enumerate(self.N_candle_analyze):
